@@ -1,0 +1,30 @@
+app:
+  intellar:
+    filepaths:
+      rcve: "C:/res/test"
+      filename: "CDINFILE"
+    polling:
+      interval:
+        secs: 5000
+  connections:
+    ems:
+      destinationnames:
+        queue: "MX.C624.GBSCITID.REMOTE.US"
+        host: "tcp://0.tcp.ngrok.io:11273"
+        user: "admin"
+        password: ""
+  ClearTodaysRecords:
+    TimeIntervalMillis: 86400000
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/C624_000_DBO_02
+    username: postgres
+    password: 123
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true

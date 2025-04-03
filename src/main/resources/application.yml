@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: PaymentsConciliationService
+  profiles:
+    active: dev
+  messages:
+    basename: errorsmessage
+  logging:
+    level:
+      root: error
+      com.payments.paymentsconciliationservice: error
