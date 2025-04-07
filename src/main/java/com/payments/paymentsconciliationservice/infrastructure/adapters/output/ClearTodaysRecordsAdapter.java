@@ -24,7 +24,9 @@ public class ClearTodaysRecordsAdapter implements ClearTodaysRecordsPort {
     public ClearTodaysRecordsAdapter(ForexRepositoryPort forexRepositoryPort) {
         this.forexRepositoryPort = forexRepositoryPort;
     }
+
     private final Timer timer = new Timer();
+
     @Override
     public void scheduleTask() {
         // Define the start time (2018-08-27 00:00:00 GMT-6)
@@ -41,7 +43,7 @@ public class ClearTodaysRecordsAdapter implements ClearTodaysRecordsPort {
             public void run() {
                 try {
                     forexRepositoryPort.deleteAll();
-                    ;
+
                     log.info("Task executed at: " + new Date());
                 } catch (RuntimeException e) {
                     log.error("Error:: ", e);

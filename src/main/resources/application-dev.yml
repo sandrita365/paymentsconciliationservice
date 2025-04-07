@@ -10,11 +10,11 @@ app:
     ems:
       destinationnames:
         queue: "MX.C624.GBSCITID.REMOTE.US"
-        host: "tcp://0.tcp.ngrok.io:11273"
+        host: "tcp://6.tcp.ngrok.io:15933"
         user: "admin"
         password: ""
   ClearTodaysRecords:
-    TimeIntervalMillis: 86400000
+    TimeIntervalMillis: 60000
 
 spring:
   datasource:

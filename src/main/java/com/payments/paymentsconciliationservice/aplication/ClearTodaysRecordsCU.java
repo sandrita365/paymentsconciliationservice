@@ -30,7 +30,7 @@ public class ClearTodaysRecordsCU implements CommandLineRunner{
 
     @Override
     public void run(String... args) throws Exception {
-        //execute();
+        execute();
     }
     public void execute() {
         log.info("Executing ClearTodaysRecordsCU...");
